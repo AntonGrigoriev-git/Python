@@ -1,8 +1,33 @@
 import random
 
-width = 11
-height = 7
 
+def select_level():
+    while True:
+        complexity = input(
+            "Easy level (press 1)\n"
+            "Medium level (press 2)\n"
+            "Hard level (press 3)\n"
+            "Your own version (press 4)\n"
+        )
+
+        if complexity == '1':
+            return 7, 7
+        elif complexity == '2':
+            return 15, 15
+        elif complexity == '3':
+            return 27, 19
+        elif complexity == '4':
+            while True:
+                width = int(input('Width: '))
+                height = int(input('Height: '))
+                if width < 7 or height < 7:
+                    print('Width and Height should be at least 7')
+                elif width % 2 == 0 or height % 2 == 0:
+                    print('Enter odd numbers')
+                else:
+                    return width, height
+
+width, height = select_level()
 maze = [['#' for _ in range(width)] for _ in range(height)]
 
 
@@ -32,10 +57,11 @@ def generate_maze(x, y):
 
 start_x = 1
 start_y = 1
-
 generate_maze(start_x, start_y)
-maze[1][1] = 'E'
-maze[6][9] = '0'
+maze[height // 2][width // 2] = 'E'
+possible_coords = [(0, 1), (0, -2), (-1, 1), (-1, -2)]
+y, x = random.choice(possible_coords)
+maze[y][x] = '0'
 
 
 def print_maze(maze):
