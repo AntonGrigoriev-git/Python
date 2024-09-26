@@ -1,0 +1,4 @@
+Tom Cat: 22 years old. Profession: Catcher. Description: Catches the mouse.
+Jerry Mouse: 20 years old. Profession: Runner. Description: Running away from the cat.
+Adam Smith: 22 years old. Profession: Engineer. Description: Creates the future.
+Eve Smith: 21 years old. Profession: Designer. Description: Creates the future.
