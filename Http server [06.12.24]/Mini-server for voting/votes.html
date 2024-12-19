@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Vote for your candidate</h1>
+    <div>
+        <button onclick="vote('Cats')">Cats</button>
+        <button onclick="vote('Dogs')">Dogs</button>
+        <button onclick="vote('Parrots')">Parrots</button>
+    </div>
+    <button onclick="resetVotes()">Reset</button>
+    <h2>Current Results</h2>
+    <div id="results"></div>
+</body>
+</html>
